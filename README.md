@@ -1,98 +1,295 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# ToolShare Enterprise
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## Overview
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+ToolShare Enterprise is a secure peer-to-peer rental marketplace that enables verified users to rent and share tools, equipment, and appliances through a trusted digital ecosystem.
 
-## Description
+The platform addresses common challenges in the rental industry, including identity fraud, asset theft, product damage, deposit disputes, and lack of trust between renters and owners.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+By combining identity verification, escrow deposit management, digital handovers, trust scoring, and dispute resolution, ToolShare Enterprise creates a transparent and secure rental experience for all participants.
 
-## Project setup
+---
 
-```bash
-$ npm install
-```
+## Problem Statement
 
-## Compile and run the project
+Purchasing expensive tools for occasional use is often inefficient and costly. At the same time, many tool owners have underutilized assets that remain idle for long periods.
 
-```bash
-# development
-$ npm run start
+Traditional rental systems frequently suffer from:
 
-# watch mode
-$ npm run start:dev
+- Fake user accounts
+- Identity fraud
+- Asset theft
+- Tool damage disputes
+- Unprotected deposits
+- Lack of accountability
+- Limited trust between parties
 
-# production mode
-$ npm run start:prod
-```
+ToolShare Enterprise aims to solve these challenges through a technology-driven and verification-first approach.
 
-## Run tests
+---
 
-```bash
-# unit tests
-$ npm run test
+## Objectives
 
-# e2e tests
-$ npm run test:e2e
+### Primary Objectives
 
-# test coverage
-$ npm run test:cov
-```
+- Enable affordable access to expensive tools and equipment
+- Create income opportunities for tool owners
+- Build a trusted rental ecosystem
+- Reduce unnecessary purchases
+- Increase tool utilization
 
-## Deployment
+### Secondary Objectives
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+- Prevent identity fraud
+- Reduce rental disputes
+- Improve transparency
+- Enhance platform security
+- Promote responsible asset sharing
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+---
 
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
-```
+## Key Features
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+### User Verification
 
-## Resources
+- Email verification
+- Phone verification
+- National ID (NID) verification
+- Selfie verification
+- Duplicate account detection
 
-Check out a few resources that may come in handy when working with NestJS:
+### Tool Verification
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+- Ownership document verification
+- Tool media validation
+- Listing approval workflow
 
-## Support
+### Tool Marketplace
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+- Tool listings
+- Category management
+- Search and filtering
+- Availability management
+- Rental pricing configuration
 
-## Stay in touch
+### Rental Lifecycle Management
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- Rental requests
+- Owner approvals
+- Deposit locking
+- Digital handovers
+- Return management
+- Rental tracking
+
+### Escrow Deposit System
+
+- Deposit protection
+- Refund processing
+- Compensation calculation
+- Deposit release management
+
+### Trust Score System
+
+- User reputation scoring
+- Successful rental tracking
+- Review-based scoring
+- Fraud penalty scoring
+
+### Dispute Resolution
+
+- Evidence submission
+- Damage reporting
+- Administrative review
+- Compensation handling
+
+### Reporting & Analytics
+
+- Revenue reports
+- Rental reports
+- Fraud reports
+- User activity reports
+
+---
+
+## User Roles
+
+### Renter
+
+A verified user who rents tools from owners.
+
+#### Permissions
+
+- Browse tools
+- Search tools
+- Request rentals
+- Pay rental fees
+- Lock security deposits
+- Confirm handovers
+- Submit return requests
+- View rental history
+- Submit disputes
+- Rate owners
+
+---
+
+### Tool Owner
+
+A verified user who lists tools for rent.
+
+#### Permissions
+
+- Add tools
+- Edit tools
+- Upload ownership documents
+- Set rental prices
+- Set deposits
+- Approve rental requests
+- Reject rental requests
+- Confirm handovers
+- Confirm returns
+- Submit damage reports
+
+---
+
+### Verification Officer
+
+Responsible for platform verification and fraud prevention.
+
+#### Responsibilities
+
+##### User Verification
+
+- Verify phone numbers
+- Verify email addresses
+- Review NID information
+- Review selfies
+- Detect duplicate accounts
+- Approve user verification
+
+##### Tool Verification
+
+- Verify ownership documents
+- Verify tool details
+- Verify tool media
+- Approve listings
+- Reject suspicious listings
+
+##### Fraud Monitoring
+
+- Flag suspicious users
+- Flag suspicious tools
+- Generate verification reports
+
+---
+
+### Administrator
+
+Highest authority of the platform.
+
+#### Responsibilities
+
+##### User Management
+
+- Manage users
+- Manage verification officers
+- Suspend accounts
+- Activate accounts
+
+##### Rental Management
+
+- Monitor rentals
+- Monitor overdue rentals
+- Review incidents
+
+##### Financial Management
+
+- Manage escrow deposits
+- Approve refunds
+- Monitor transactions
+
+##### Dispute Resolution
+
+- Review disputes
+- Review evidence
+- Calculate compensation
+- Release deposits
+
+##### Reporting
+
+- Revenue reports
+- Rental reports
+- User reports
+- Fraud reports
+
+---
+
+## Technology Stack
+
+### Frontend
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+
+### Backend
+
+- NestJS
+- Node.js
+- TypeScript
+
+### Database
+
+- PostgreSQL
+
+### ORM
+
+- TypeORM
+
+### Authentication
+
+- JWT Authentication
+- Role-Based Access Control (RBAC)
+
+### Storage
+
+- AWS S3 / Cloudinary
+
+---
+
+## Future Enhancements
+
+### AI Damage Detection
+
+Analyze tool images before and after rental periods to identify potential damages automatically.
+
+### AI Fraud Detection
+
+Detect suspicious activities, duplicate accounts, and high-risk transactions.
+
+### AI Pricing Recommendation
+
+Suggest optimal rental prices and deposit amounts based on tool category and market trends.
+
+### Mobile Application
+
+Native Android and iOS applications for renters and owners.
+
+---
+
+## Project Status
+
+🚧 Currently Under Development
+
+ToolShare Enterprise is being actively developed as a secure rental marketplace platform focused on trust, transparency, and efficient asset sharing.
+
+---
+
+## Team
+
+Developed by the ToolShare Enterprise Team.
+
+---
 
 ## License
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+This project is licensed under the MIT License.
