@@ -1,4 +1,15 @@
-import {Controller,Get,Post,Put,Patch,Delete,Param,Query,Body,ParseIntPipe} from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Put,
+  Patch,
+  Delete,
+  Param,
+  Query,
+  Body,
+  ParseIntPipe,
+} from '@nestjs/common';
 import { RentService } from './rent.service';
 import { CreateRentalDTO } from './dto/create-rental.dto';
 import { ApproveRentalDTO } from './dto/approve-rental.dto';

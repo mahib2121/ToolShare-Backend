@@ -10,7 +10,6 @@ import { RatingDTO } from './dto/rating.dto';
 
 @Injectable()
 export class RentService {
-  
   // Browse tools
   getAllRentals(status: string): object {
     if (status) {
@@ -52,10 +51,10 @@ export class RentService {
     };
   }
 
-  // Lock security deposits 
+  // Lock security deposits
   lockDeposit(data: DepositDTO): object {
     return {
-      message: `Security deposit of ${data.amount} locked for rental ID: ${data.rental_id}`,           
+      message: `Security deposit of ${data.amount} locked for rental ID: ${data.rental_id}`,
       data,
     };
   }

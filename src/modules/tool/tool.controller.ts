@@ -14,29 +14,29 @@ import { ToolService } from './tool.service';
 import { CreateToolDto } from './dto/create-tool.dto';
 import { UpdateToolDto } from './dto/update-tool.dto';
 
-@Controller('tools') 
+@Controller('tools')
 export class ToolController {
   constructor(private readonly toolService: ToolService) {}
 
-  // 1. Create Tool 
+  // 1. Create Tool
   @Post()
   create(@Body() createToolDto: CreateToolDto) {
     return this.toolService.create(createToolDto);
   }
 
-  // 2. Get All Tools with Pagination 
+  // 2. Get All Tools with Pagination
   @Get()
   findAll(@Query('page') page: number, @Query('limit') limit: number) {
     return this.toolService.findAll(page, limit);
   }
 
-  // 3. Get Tool By ID 
+  // 3. Get Tool By ID
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.toolService.findOne(id);
   }
 
-  // 4. Search Tool By Category 
+  // 4. Search Tool By Category
   @Get('search/category')
   findByCategory(@Query('category') category: string) {
     return this.toolService.findByCategory(category);
@@ -48,7 +48,7 @@ export class ToolController {
     return this.toolService.getAvailability(id);
   }
 
-  // 6. Full Update Tool Data 
+  // 6. Full Update Tool Data
   @Put(':id')
   update(@Param('id') id: string, @Body() updateToolDto: UpdateToolDto) {
     return this.toolService.update(id, updateToolDto);
