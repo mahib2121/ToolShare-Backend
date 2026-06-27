@@ -3,8 +3,8 @@ export class CreateWalletDto
 {
     @IsInt()
     
-    userId: number;
+    userId! : number;
 
     @Min(0)
-    balance: number;
+    balance! : number;
 }
