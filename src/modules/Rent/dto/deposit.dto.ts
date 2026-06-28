@@ -1,5 +1,5 @@
 export class DepositDTO {
   rental_id!: number;
   amount!: number;
-  locked_by!: string;
+  processed_by!: string;
 }

@@ -12,8 +12,7 @@ import { ProductOwnerService } from '../services/product-owner.service';
 import { ApproveRentalDTO } from '../dto/approve-rental.dto';
 import { HandoverDTO } from '../dto/handover.dto';
 import { DepositDTO } from '../dto/deposit.dto';
-import { RatingDTO } from '../dto/rating.dto';
-import { CreateRentalDTO } from '../dto/create-rental.dto';
+import { CancelRentalDTO } from '../dto/cancel-Rental.dto';
 
 @Controller('rent/owner')
 export class ProductOwnerController {
@@ -37,21 +36,23 @@ export class ProductOwnerController {
     return this.productOwnerService.handoverItem(mydata);
   }
 
-  // URL: http://localhost:3000/rent/owner/create
-  @Post('create')
-  createRental(@Body() mydata: CreateRentalDTO): object {
-    return this.productOwnerService.createRental(mydata);
-  }
-
   // URL: http://localhost:3000/rent/owner/deposit/lock
   @Post('deposit/lock')
   lockDeposit(@Body() mydata: DepositDTO): object {
     return this.productOwnerService.lockDeposit(mydata);
   }
 
-  // URL: http://localhost:3000/rent/owner/rate
-  @Post('rate')
-  rateOwner(@Body() mydata: RatingDTO): object {
-    return this.productOwnerService.rateOwner(mydata);
+  // URL: http://localhost:3000/rent/owner/deposit/release
+  @Post('deposit/release')
+  releaseDeposit(@Body() mydata: DepositDTO): object {
+    return this.productOwnerService.releaseDeposit(mydata);
   }
+
+  // URL: http://localhost:3000/rent/owner/cancel
+  @Patch('cancel')
+  cancelRental(@Body() mydata: CancelRentalDTO): object {
+    return this.productOwnerService.cancelRental(mydata);
+  }
+
+  
 }

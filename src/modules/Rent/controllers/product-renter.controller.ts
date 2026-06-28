@@ -1,12 +1,21 @@
 import {
-  Controller, Get, Post, Patch, Delete,
-  Param, Query, Body, ParseIntPipe,
+  Controller,
+  Get,
+  Post,
+  Patch,
+  Delete,
+  Param,
+  Query,
+  Body,
+  ParseIntPipe,
 } from '@nestjs/common';
 import { ProductRenterService } from '../services/product-renter.service';
 import { CreateRentalDTO } from '../dto/create-rental.dto';
 import { ReturnDTO } from '../dto/return.dto';
 import { PaymentDTO } from '../dto/payment.dto';
 import { DisputeDTO } from '../dto/dispute.dto';
+import { RatingDTO } from '../dto/rating.dto';
+import { CancelRentalDTO } from '../dto/cancel-Rental.dto';
 
 @Controller('rent/renter')
 export class ProductRenterController {
@@ -34,6 +43,12 @@ export class ProductRenterController {
     return this.productRenterService.getRentalHistory(renter);
   }
 
+  // URL: http://localhost:3000/rent/renter/create
+  @Post('create')
+  createRental(@Body() mydata: CreateRentalDTO): object {
+    return this.productRenterService.createRental(mydata);
+  }
+
   // URL: http://localhost:3000/rent/renter/pay
   @Post('pay')
   payRentalFee(@Body() mydata: PaymentDTO): object {
@@ -52,4 +67,15 @@ export class ProductRenterController {
     return this.productRenterService.returnItem(mydata);
   }
 
+  // URL: http://localhost:3000/rent/renter/rate
+  @Post('rate')
+  rateOwner(@Body() mydata: RatingDTO): object {
+    return this.productRenterService.rateOwner(mydata);
+  }
+
+  // URL: http://localhost:3000/rent/renter/cancel
+  @Patch('cancel')
+  cancelRental(@Body() mydata: CancelRentalDTO): object {
+    return this.productRenterService.cancelRental(mydata);
+  }
 }

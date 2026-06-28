@@ -2,8 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { ApproveRentalDTO } from '../dto/approve-rental.dto';
 import { HandoverDTO } from '../dto/handover.dto';
 import { DepositDTO } from '../dto/deposit.dto';
-import { RatingDTO } from '../dto/rating.dto';
-import { CreateRentalDTO } from '../dto/create-rental.dto'
+import { CancelRentalDTO } from '../dto/cancel-Rental.dto';
 
 @Injectable()
 export class ProductOwnerService {
@@ -25,13 +24,6 @@ export class ProductOwnerService {
     };
   }
 
-  createRental(data: CreateRentalDTO): object {
-    return {
-      message: 'Rental request created successfully',
-      data,
-    };
-  }
-
   lockDeposit(data: DepositDTO): object {
     return {
       message: `Security deposit of ${data.amount} locked for rental ID: ${data.rental_id}`,
@@ -39,9 +31,16 @@ export class ProductOwnerService {
     };
   }
 
-  rateOwner(data: RatingDTO): object {
+  releaseDeposit(data: DepositDTO): object {
     return {
-      message: `Owner ${data.owner_name} rated ${data.rating}/5 by ${data.renter_name}`,
+      message: `Security deposit of ${data.amount} released for rental ID: ${data.rental_id}`,
+      data,
+    };
+  }
+  
+  cancelRental(data: CancelRentalDTO): object {
+    return {
+      message: `Rental ID ${data.rental_id} cancelled by ${data.cancelled_by}`,
       data,
     };
   }
