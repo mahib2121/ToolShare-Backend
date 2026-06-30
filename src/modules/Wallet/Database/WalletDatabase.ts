@@ -7,7 +7,7 @@ export const WalletDatabase: Wallet[] =
         balance:100,
         createdAt:new Date(),
         updatedAt:new Date(),
-         isActive: true
+        isActive: true
     },
     {
         id:2,
