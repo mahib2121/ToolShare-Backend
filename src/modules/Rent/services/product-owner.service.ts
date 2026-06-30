@@ -3,6 +3,7 @@ import { ApproveRentalDTO } from '../dto/approve-rental.dto';
 import { HandoverDTO } from '../dto/handover.dto';
 import { DepositDTO } from '../dto/deposit.dto';
 import { CancelRentalDTO } from '../dto/cancel-Rental.dto';
+import { CreateToolDTO } from '../dto/tool.dto';
 
 @Injectable()
 export class ProductOwnerService {
@@ -31,13 +32,20 @@ export class ProductOwnerService {
     };
   }
 
+  createTool(data: CreateToolDTO): object {
+    return {
+      message: 'Tool created successfully',
+      data,
+    };
+  }
+
   releaseDeposit(data: DepositDTO): object {
     return {
       message: `Security deposit of ${data.amount} released for rental ID: ${data.rental_id}`,
       data,
     };
   }
-  
+
   cancelRental(data: CancelRentalDTO): object {
     return {
       message: `Rental ID ${data.rental_id} cancelled by ${data.cancelled_by}`,
